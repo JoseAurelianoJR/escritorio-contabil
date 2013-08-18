@@ -12,10 +12,10 @@ development:
   adapter: mysql2
   encoding: utf8
   reconnect: false
-  database: escritorio-contabil_development
+  database: contabil_development
   pool: 5
   username: root
-  password:
+  password: "123"
   socket: /var/run/mysqld/mysqld.sock
 
 # Warning: The database defined as "test" will be erased and
@@ -28,7 +28,7 @@ test:
   database: escritorio-contabil_test
   pool: 5
   username: root
-  password:
+  password: "123"
   socket: /var/run/mysqld/mysqld.sock
 
 production:
@@ -38,5 +38,5 @@ production:
   database: escritorio-contabil_production
   pool: 5
   username: root
-  password:
+  password: "123"
   socket: /var/run/mysqld/mysqld.sock
