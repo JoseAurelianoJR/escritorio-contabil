@@ -1,0 +1,31 @@
+<%= form_for @usuario, url: {action: "create"} do |frm| %>
+	<% if @contato.errors.any? %>
+	    <div id="error_explanation">
+	      <h2><%= pluralize(@contato.errors.count, "error") %> prohibited this usuario from being saved:</h2>
+
+	      <ul>
+	      <% @contato.errors.full_messages.each do |msg| %>
+	        <li><%= msg %></li>
+	      <% end %>
+	      </ul>
+	    </div>
+  	<% end %>
+	
+	<div>
+		<div class="label">Nome Completo</div>
+		<br/>
+		<%= frm.text_field :nome %>
+		<br/>
+		<div class="label">Login</div>
+		<br/>
+		<%= frm.text_field :login %>
+		<br/>
+		<div class="label">Email</div>
+		<br/>
+		<%= frm.text_field :email %>
+		<br/>
+		<div class="label">Senha</div>
+		<br/>
+		<%= frm.password_field :email %>
+	</div>
+<%end%>
